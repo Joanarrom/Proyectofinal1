@@ -9,7 +9,7 @@ public class Player_Controller : MonoBehaviour
 
     private float verticalInput;
     private float horizontalInput;
-    public GameObject proyectilPrefab;
+    public GameObject misil;
 
     public bool gameOver;
     public TextMeshProUGUI CounterText;
@@ -44,10 +44,7 @@ public class Player_Controller : MonoBehaviour
             transform.Rotate(Vector3.right * Time.deltaTime * turnSpeed * verticalInput);
             transform.Rotate(Vector3.up * Time.deltaTime * turnSpeed * horizontalInput);            
       
-            if (transform.position.y >= 200)
-            { transform.position = new Vector3(transform.position.x, 200, transform.position.z); }
-            if (transform.position.y <= 0)
-            { transform.position = new Vector3(transform.position.x, 0, transform.position.z); }
+            
 
             if (transform.position.x >= 200)
             { transform.position = new Vector3(200, transform.position.y, transform.position.z); }
@@ -58,17 +55,22 @@ public class Player_Controller : MonoBehaviour
             { transform.position = new Vector3(transform.position.x, transform.position.y, 350); }
             if (transform.position.z <= -100)
             { transform.position = new Vector3(transform.position.x, transform.position.y, -100); }
-          
-            if (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.Space))
+
+            if (transform.position.y >= 200)
+            { transform.position = new Vector3(transform.position.x, 200, transform.position.z); }
+            if (transform.position.y <= 0)
+            { transform.position = new Vector3(transform.position.x, 0, transform.position.z); }
+
+            if (Input.GetKeyDown(KeyCode.RightControl))
             { 
-                Instantiate(proyectilPrefab, transform.position, gameObject.transform.rotation);
+                Instantiate(misil, transform.position, gameObject.transform.rotation);
             }
 
             CounterText.text = $"coin: {coin} / 10";
 
             if (coin == 10)
             {
-                winText.text = $"WIN";
+                winText.text = $"WINNER";
                 winText.gameObject.SetActive(true);
                 audioCamera.Stop();
                 gameOver = true;

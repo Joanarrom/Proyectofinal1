@@ -270,7 +270,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 883634e1c7cb04070aecb71779ed7e1d, type: 3}
+  m_audioClip: {fileID: 8300000, guid: dd95f11a4b5973a4592bee3c1efdc6bb, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.106
   m_Pitch: 1
@@ -447,7 +447,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: WIN
+  m_text: WINNER
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1005,7 +1005,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Medals  10 / 10
+  m_text: Coins  10 / 10
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
   m_sharedMaterial: {fileID: 2164040, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
@@ -1129,7 +1129,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fd9ffc4c0121e4741ad51f0220f98e81, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  proyectilPrefab: {fileID: 7594780473704152761, guid: 396c665a5c7c0434d887299738680ea5, type: 3}
+  misil: {fileID: 7594780473704152761, guid: 396c665a5c7c0434d887299738680ea5, type: 3}
   gameOver: 0
   CounterText: {fileID: 1886011054}
   winText: {fileID: 610311078}
